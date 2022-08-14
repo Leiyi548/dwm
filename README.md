@@ -52,3 +52,4 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [scratchpad](https://dwm.suckless.org/patches/scratchpad/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [autostart](https://dwm.suckless.org/patches/autostart/)
+- [viewontag](https://dwm.suckless.org/patches/viewontag/) 
