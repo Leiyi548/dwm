@@ -43,6 +43,7 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ NULL,       NULL },
 };
 
 /* key definitions */
@@ -101,9 +102,13 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+  /* quit dwm */
 	{ MODKEY|ControlMask,           XK_q,      quit,           {0} },
-  /* scratchpad  super+~*/ 
+  /* scratchpad  super+~*/
   { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+  /* cyclelayout  super+[\]*/
+	{ MODKEY,                       XK_bracketleft,  cyclelayout,    {.i = -1 } },
+	{ MODKEY,                       XK_bracketright, cyclelayout,    {.i = +1 } },
 };
 
 /* button definitions */
