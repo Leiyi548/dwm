@@ -1,5 +1,15 @@
 # dwm
 
+## 安装
+
+[dwm-官网](https://dwm.suckless.org/)
+
+安装好的 dwm 是一个 tar.gz，我们需要解压缩它。然后修改名字。
+
+```sh
+tar -zxvf dwm-6.3.tar.gz . && mv dwm-6.3 dwm
+```
+
 ## 快捷键
 
 ### 窗口
@@ -54,4 +64,5 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [autostart](https://dwm.suckless.org/patches/autostart/)
 - [viewontag](https://dwm.suckless.org/patches/viewontag/)
-- [fancybar](https://dwm.suckless.org/patches/fancybar/) 
+- [fancybar](https://dwm.suckless.org/patches/fancybar/)
+- [alpha](https://dwm.suckless.org/patches/alpha/) 
