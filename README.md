@@ -15,11 +15,20 @@
 
 ### 布局
 
-| 快捷键        | 功能            |
-| ------------- | --------------- |
-| `super` + `t` | `tile`布局 平铺 |
-| `super` + `f` | `NULL`布局 浮动 |
-| `super` + `m` | `monocle`布局   |
+| 快捷键                      | 功能              |
+| --------------------------- | ----------------- |
+| `super` + `t`               | `tile`布局 平铺   |
+| `super` + `f`               | `NULL`布局 浮动   |
+| `super` + `m`               | `monocle`布局     |
+| `super` + `shift` + `space` | toggle float mode |
+
+### 鼠标
+
+| 快捷键                          | 功能                     |
+| ------------------------------- | ------------------------ |
+| `leftmouseclick` + `tag`        | 将当前窗口移动到对应 tag |
+| `rightmouseclick` + `clientwin` | resize window            |
+| `midmouseclick` + `clientwin`   | toggle float            |
 
 ## add patch
 
