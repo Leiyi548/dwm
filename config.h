@@ -52,7 +52,7 @@ static const Layout layouts[] = {
 #define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ ALTKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ ALTKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY,                       KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ ALTKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ ALTKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 

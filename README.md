@@ -12,6 +12,7 @@
 | `alt` + `shift` + `1-9` | 将 application 带入对应 tag(1-9) |
 | `alt` + `tab`           | switch recent tag                |
 | `super` + `` ` ``       | scratchpad st                    |
+| `super` + `1-9`         | toggle 那个标签的页面()          |
 
 ### 布局
 
@@ -28,7 +29,7 @@
 | ------------------------------- | ------------------------ |
 | `leftmouseclick` + `tag`        | 将当前窗口移动到对应 tag |
 | `rightmouseclick` + `clientwin` | resize window            |
-| `midmouseclick` + `clientwin`   | toggle float            |
+| `midmouseclick` + `clientwin`   | toggle float             |
 
 ## add patch
 
@@ -52,4 +53,5 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [scratchpad](https://dwm.suckless.org/patches/scratchpad/)
 - [cyclelayouts](https://dwm.suckless.org/patches/cyclelayouts/)
 - [autostart](https://dwm.suckless.org/patches/autostart/)
-- [viewontag](https://dwm.suckless.org/patches/viewontag/) 
+- [viewontag](https://dwm.suckless.org/patches/viewontag/)
+- [fancybar](https://dwm.suckless.org/patches/fancybar/) 
