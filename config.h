@@ -39,6 +39,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "scratchpad",NULL,      NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -72,7 +73,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+// static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "kitty","--title",scratchpadname, "--class", "scratchpad",NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -81,8 +83,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_s,      incnmaster,     {.i = +1 } },
+	{ MODKEY,                       XK_v,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_z,      zoom,           {0} },
@@ -114,17 +116,19 @@ static Key keys[] = {
   /* quit dwm */
 	{ MODKEY|ControlMask,           XK_q,      quit,           {0} },
   /* scratchpad  super+~*/
-  { MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+  { MODKEY,                       XK_Tab,  togglescratch,  {.v = scratchpadcmd } },
   /* cyclelayout  super+[\]*/
 	{ MODKEY,                       XK_bracketleft,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_bracketright, cyclelayout,    {.i = +1 } },
   /* change audio light */
-  { 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10") },
-  { 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10") },
-  { 0, XF86XK_AudioMute,          spawn, SHCMD("amixer -q -D pulse sset Master toggle") },
-  { 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("amixer -q set Master 5%+ unmute") },
-  { 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
-
+  { 0,                            XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10") },
+  { 0,                            XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10") },
+  { 0,                            XF86XK_AudioMute,          spawn, SHCMD("amixer -q -D pulse sset Master toggle") },
+  { 0,                            XF86XK_AudioRaiseVolume,   spawn, SHCMD("amixer -q set Master 5%+ unmute") },
+  { 0,                            XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
+  { 0,                            XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
+  /* change audio light */
+  { 0,                            XK_F1,                     spawn, SHCMD("flameshot gui") },
 };
 
 /* button definitions */
