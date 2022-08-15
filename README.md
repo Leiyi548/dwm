@@ -73,3 +73,4 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [viewontag](https://dwm.suckless.org/patches/viewontag/)
 - [fancybar](https://dwm.suckless.org/patches/fancybar/)
 - [alpha](https://dwm.suckless.org/patches/alpha/)
+- [systray](https://dwm.suckless.org/patches/systray/) 
