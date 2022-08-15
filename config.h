@@ -120,7 +120,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_bracketright, cyclelayout,    {.i = +1 } },
   /* change audio light */
   { 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10") },
-  { 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dnc 10") },
+  { 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dec 10") },
   { 0, XF86XK_AudioMute,          spawn, SHCMD("amixer -q -D pulse sset Master toggle") },
   { 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("amixer -q set Master 5%+ unmute") },
   { 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
