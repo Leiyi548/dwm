@@ -48,6 +48,14 @@ tar -zxvf dwm-6.3.tar.gz . && mv dwm-6.3 dwm
 | `midmouseclick` + `symbol(布局切换)`          | 切换 monocle 布局        |
 | `rightmouseclick` + `symbol(布局切换)`        | 切换 tile 布局           |
 
+### rofi
+
+| 快捷键        | 功能          |
+| ------------- | ------------- |
+| `super` + `o` | rofi 启动软件 |
+| `super` + `r` | rofi 运行命令 |
+| `super` + `p` | rofi 切换窗口 |
+
 ## add patch
 
 ### example
@@ -73,4 +81,4 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [viewontag](https://dwm.suckless.org/patches/viewontag/)
 - [fancybar](https://dwm.suckless.org/patches/fancybar/)
 - [alpha](https://dwm.suckless.org/patches/alpha/)
-- [systray](https://dwm.suckless.org/patches/systray/) 
+- [systray](https://dwm.suckless.org/patches/systray/)

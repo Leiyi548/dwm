@@ -129,6 +129,10 @@ static Key keys[] = {
   { 0,                            XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
   /* change audio light */
   { 0,                            XK_F1,                     spawn, SHCMD("flameshot gui") },
+  /* rifi */
+  { MODKEY,                       XK_o,                      spawn, SHCMD("rofi -theme ~/.config/awesome/rofis/rofi/config.rasi  -show drun") },
+  { MODKEY,                       XK_p,                      spawn, SHCMD("rofi -theme ~/.config/awesome/rofis/rofi/config.rasi  -show window") },
+  { MODKEY,                       XK_r,                      spawn, SHCMD("rofi -theme ~/.config/awesome/rofis/rofi/config.rasi  -show run") },
 };
 
 /* button definitions */
