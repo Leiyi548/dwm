@@ -35,11 +35,18 @@ tar -zxvf dwm-6.3.tar.gz . && mv dwm-6.3 dwm
 
 ### 鼠标
 
-| 快捷键                          | 功能                     |
-| ------------------------------- | ------------------------ |
-| `leftmouseclick` + `tag`        | 将当前窗口移动到对应 tag |
-| `rightmouseclick` + `clientwin` | resize window            |
-| `midmouseclick` + `clientwin`   | toggle float             |
+| 快捷键                                        | 功能                     |
+| --------------------------------------------- | ------------------------ |
+| `leftmouseclick` + `super` + `tag`            | 将当前窗口移动到对应 tag |
+| `rightmouseclick` + `clientwin(当前应用窗口)` | resize window            |
+| `midmouseclick` + `clientwin(当前应用窗口)`   | toggle float             |
+| `rightmouseclick` + `tagbar(标签页)`          | toggle 对应标签的页面    |
+| `leftmouseclick` + `titlebar(标题栏)`         | 切换为 monocle 布局      |
+| `midmouseclick` + `titlebar(标题栏)`          | 关闭这个窗口             |
+| `rightmouseclick` + `titlebar(标题栏)`        | zoom                     |
+| `leftmouseclick` + `symbol(布局切换)`         | 切换最近布局             |
+| `midmouseclick` + `symbol(布局切换)`          | 切换 monocle 布局        |
+| `rightmouseclick` + `symbol(布局切换)`        | 切换 tile 布局           |
 
 ## add patch
 
@@ -65,4 +72,4 @@ patch -p1 < patch/dwm-hide_vacant_tags-6.3.diff
 - [autostart](https://dwm.suckless.org/patches/autostart/)
 - [viewontag](https://dwm.suckless.org/patches/viewontag/)
 - [fancybar](https://dwm.suckless.org/patches/fancybar/)
-- [alpha](https://dwm.suckless.org/patches/alpha/) 
+- [alpha](https://dwm.suckless.org/patches/alpha/)
