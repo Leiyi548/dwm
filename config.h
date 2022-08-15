@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -117,6 +118,13 @@ static Key keys[] = {
   /* cyclelayout  super+[\]*/
 	{ MODKEY,                       XK_bracketleft,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_bracketright, cyclelayout,    {.i = +1 } },
+  /* change audio light */
+  { 0, XF86XK_MonBrightnessUp,    spawn, SHCMD("xbacklight -inc 10") },
+  { 0, XF86XK_MonBrightnessDown,  spawn, SHCMD("xbacklight -dnc 10") },
+  { 0, XF86XK_AudioMute,          spawn, SHCMD("amixer -q -D pulse sset Master toggle") },
+  { 0, XF86XK_AudioRaiseVolume,   spawn, SHCMD("amixer -q set Master 5%+ unmute") },
+  { 0, XF86XK_AudioLowerVolume,   spawn, SHCMD("amixer -q set Master 5%- unmute") },
+
 };
 
 /* button definitions */
